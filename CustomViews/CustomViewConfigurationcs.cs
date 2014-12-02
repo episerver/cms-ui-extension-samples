@@ -1,4 +1,5 @@
-﻿using EPiServer.Core;
+﻿using System.Web;
+using EPiServer.Core;
 using EPiServer.ServiceLocation;
 using EPiServer.Shell;
 using UIExtensionSamples;
@@ -19,7 +20,7 @@ namespace UIExtensionSamples.CustomViews
             //This sample shows a Web Forms page. You can use MVC as well but there is
             //some helper functionality like resolving the content item passed to the page
             //that there is currently no built in support for MVC.
-            ViewType = "/Business/UIExtensions/CustomViews/CustomView.aspx";
+            ViewType = VirtualPathUtility.ToAbsolute("~/Business/UIExtensions/CustomViews/CustomView.aspx");
             IconClass = "epi-iconForms";
         }
     }
